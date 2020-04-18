@@ -42,15 +42,18 @@ class _01_SwappingDigits {
 		int switchTwo;
 
 		while (!fixed) {
+			fixed = true;
 			for (int i = 0; i < arr.length; i++) {
 				if (i > 0) {
 					if (arr[i - 1] == arr[i]) {
 						continue;
 					} else if (arr[i] < (arr[i - 1])) {
+						fixed = false;
 						switchOne = arr[i];
 						switchTwo = arr[i - 1];
 						arr[2] = switchOne;
 						arr[1] = switchTwo;
+
 					}
 				}
 			}
@@ -63,6 +66,6 @@ class _01_SwappingDigits {
 	public static int findMiddle(int[] arr) {
 		sortIntArray(arr);
 
-		return arr[(arr.length)/2];
+		return 0;
 	}
 }
