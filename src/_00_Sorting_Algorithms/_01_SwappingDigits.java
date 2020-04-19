@@ -25,11 +25,11 @@ class _01_SwappingDigits {
 	// 1. Complete the method so that the first two elements of the array are
 	// swapped
 	public static void swapArrayOfTwo(int[] arr) {
-		int switchOne = arr[1];
-		int switchTwo = arr[2];
+		int switchOne = arr[0];
+		int switchTwo = arr[1];
 
-		arr[2] = switchOne;
-		arr[1] = switchTwo;
+		arr[1] = switchOne;
+		arr[0] = switchTwo;
 
 	}
 
@@ -65,7 +65,7 @@ class _01_SwappingDigits {
 	// *Double Hint* Use the method you already wrote in step 2 to sort it
 	public static int findMiddle(int[] arr) {
 		sortIntArray(arr);
-
-		return 0;
+		int middle = arr.length/2;
+		return middle;
 	}
 }
