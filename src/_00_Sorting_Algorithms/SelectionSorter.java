@@ -11,7 +11,22 @@ public class SelectionSorter extends Sorter {
 	void sort(int[] array, SortingVisualizer display) {
 		//1. make a for loop to iterate through all but the last 
 		//   element of the array
-		
+		for(int i = 1; i < array.length-1; i++) {
+			int index = i;
+			int switchOne;
+			int switchTwo;
+			
+			for(int l = i +1; l < array.length; l++) {
+				if(array[l] < array[index]) {
+					index = l;
+					switchOne = array[i];
+					switchTwo = array[index];
+					array[index] = switchOne;
+					array[i] = switchTwo;
+					display.updateDisplay();
+				}
+			}
+		}
 			//2. create an integer called index and set it equal to i
 			
 			//3. make another for loop that starts at i + 1 and

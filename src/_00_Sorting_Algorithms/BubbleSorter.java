@@ -16,19 +16,16 @@ public class BubbleSorter extends Sorter {
 
 		while (!fixed) {
 			fixed = true;
-			for (int i = 0; i < array.length; i++) {
-				if (i > 0) {
-					if (array[i - 1] == array[i]) {
-						continue;
-					} else if (array[i] < (array[i - 1])) {
-						fixed = false;
-						switchOne = array[i];
-						switchTwo = array[i - 1];
-						array[2] = switchOne;
-						array[1] = switchTwo;
-
-					}
+			for (int i = 1; i < array.length; i++) {
+				if (array[i] < (array[i - 1])) {
+					fixed = false;
+					switchOne = array[i];
+					switchTwo = array[i - 1];
+					array[i - 1] = switchOne;
+					array[i] = switchTwo;
+					display.updateDisplay();
 				}
+
 			}
 		}
 		display.updateDisplay();
