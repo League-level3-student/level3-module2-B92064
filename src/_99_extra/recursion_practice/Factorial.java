@@ -11,12 +11,19 @@ public class Factorial {
 	public static int factorial(int n) {
 		//1. If n is zero
 			//2. return 1
-		
+		if(n == 0) {
+			return 1;
+		} else {
+			return n* factorial(n-1);
+		}
 			//3. else return n * factorial(n-1)
-		return 0;
+		
 	}
 	
 	public static void main(String[] args) {
 		System.out.println("!5 is " + factorial(5));
+		System.out.println("!4 is " + factorial(4));
+		System.out.println("!3 is " + factorial(3));
+		System.out.println("!2 is " + factorial(2));
 	}
 }
